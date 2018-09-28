@@ -1,4 +1,3 @@
-!
 <!DOCTYPE html>
 <html>
 
@@ -7,23 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Train Schedule</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!---external CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+    <!--jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!--<script src='https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js'></script>-->
+    
+    <!--moment cdn-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4 text-center">Train Schedule</h1>
+            <div class="row">
+                <div class="col-5"></div>
+                <div id="clock" class="col-2"></div>
+                <div class="col-5"></div>
+            </div>    
         </div>
     </div>
 
     <div class="container trainInfo">
-        <table class="table table-dark">
+        <table id="trainTable" class="table table-dark">
             <thead>
                 <tr>
                     <th scope="col">Train Name</th>
@@ -37,7 +45,7 @@
     </div>
     <div class="container enterTrain">
         <form>
-
+            <h3 class="text-center">Enter Train Here</h3>
             <div class="form-group">
                 <label for="">Tain Name</label>
                 <input type="text" class="form-control" id="trainNameInput" placeholder="Name">
@@ -58,6 +66,7 @@
             <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
         </form>
     </div>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
