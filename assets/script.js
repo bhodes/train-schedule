@@ -1,3 +1,5 @@
+
+//current time clock
 function currentTime() {
     var current = moment().format('LT');
     $("#clock").html(current);
@@ -37,6 +39,8 @@ $("#submitBtn").on("click", function () {
     console.log(moment().format("hh:mm A"));
     console.log(moment().format("X"));
 
+
+    
     //append new row to table
     $("#trainTable").append(
         "<tr><th> " +
@@ -51,4 +55,12 @@ $("#submitBtn").on("click", function () {
         minutes +
         "</th></tr>"
     );
+    //firebase database
+    //console says firebase.database is not a function
+    var firebaseRef = firebase.database().ref();
+    firebaseRef.child("name").set(formTrainName);
+    firebaseRef.child("destinaion").set(formDest);
+    firebaseRef.child("frequency").set(formFreq);
+    firebaseRef.child("arrival").set(formArrival);
+
 })

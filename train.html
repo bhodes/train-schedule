@@ -7,13 +7,15 @@
     <title>Train Schedule</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <!---external CSS-->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
     <!--jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!--<script src='https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js'></script>-->
-    
+
     <!--moment cdn-->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
@@ -26,7 +28,7 @@
                 <div class="col-5"></div>
                 <div id="clock" class="col-2"></div>
                 <div class="col-5"></div>
-            </div>    
+            </div>
         </div>
     </div>
 
@@ -66,6 +68,19 @@
             <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
         </form>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD6rRl-QHqsje9VfL4MolPMh6Knu8h9rgY",
+            authDomain: "train-schedule-cf540.firebaseapp.com",
+            databaseURL: "https://train-schedule-cf540.firebaseio.com",
+            projectId: "train-schedule-cf540",
+            storageBucket: "train-schedule-cf540.appspot.com",
+            messagingSenderId: "892686246943"
+        };
+        firebase.initializeApp(config);
+    </script>
     <script src="assets/script.js"></script>
 </body>
 
