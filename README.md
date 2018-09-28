@@ -1,1 +1,1 @@
-# train-schedule
+# train-schedule app that allows you to enter train information and calculate the next train arrival based on the first train arrival and the frequency of visits using moment.js. I was not able to store data in firebase-not sure if it was a faulty link or placement in the code, but I couldn't figure it out. 
